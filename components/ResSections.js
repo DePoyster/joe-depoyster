@@ -9,7 +9,8 @@ export default function ResSections({section, data})
   return (
     <>
       <h2>{section}</h2>
-      <ul>      {
+      <ul> 
+      {
         data.map((e, i) => (
           <ResSectionData key={i} data={e}/>
         ))

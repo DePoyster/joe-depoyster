@@ -13,13 +13,13 @@ import  App  from "./components/App.js";
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use('images', express.static(path.join(__dirname,  '/images')));
+app.use(express.static('/public'));
 
 app.get("/*", (req, res) => {
   const app = ReactDOMServer.renderToString(
     <App resdata = {data}/>
   );
-
+  
   const indexFile = path.resolve(
     "./dist/index.html"
   );
