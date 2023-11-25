@@ -1,15 +1,20 @@
 //Joe DePoyster
-//Assignment 7, COSC 4210
+//COSC 4210 final
 
 var path = require("path")
+const nodeExternals = require("webpack-node-externals");
+
 module.exports = 
 {
     
-    entry:"./src/index.js",
+    entry:"./index.js",
+    target: "node",
+    externals: [nodeExternals()],
+
     output:
     {
-        path: path.join(__dirname,"dist","assets"),
-        filename:"bundle.js"
+        path: path.join(__dirname, "build-server"),
+        filename:"index.js"
     },
     module:
     {
@@ -30,6 +35,10 @@ module.exports =
                 test:/\.css$/,
                 use: ["style-loader","css-loader"],
             },
+            {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: 'asset/resource',
+            }
         ],
     },
 };

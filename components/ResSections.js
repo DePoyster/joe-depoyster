@@ -4,12 +4,17 @@
 import React from "react";
 import ResSectionData from "./ResSectionData";
 
-export default function ResSecions({section, data})
+export default function ResSections({section, data})
 {
   return (
     <>
-      <h3>{section}</h3>
-      <ResSectionData data={data}/>
+      <h2>{section}</h2>
+      <ul>      {
+        data.map((e, i) => (
+          <ResSectionData key={i} data={e}/>
+        ))
+      }
+      </ul>
     </>
   )
 }

@@ -1,0 +1,26 @@
+body {
+  background: #FDF6E3;
+}
+
+.title {
+  color: BLACK;
+  text-align: center;
+}
+
+.resume {
+  width: 80%;
+  margin:auto;
+  padding:10px;
+  color:darkslategrey;
+  text-align:center;
+}
+.resume h2{
+  text-align: center;
+}
+.resume p{
+  text-align: left;
+}
+.resume ul{
+  text-align: left;
+  list-style-type:circle;
+}

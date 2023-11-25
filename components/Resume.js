@@ -11,7 +11,7 @@ export default function Resume({resdata})
   <>
   <Title /> 
   <div className="resume">
-    <h2>Education</h2>
+    <h2 style={{color: "blue"}}>Education</h2>
     <p>B.S. Computer Science, University of Wyoming. (Sept 2017 - Dec 2023)</p>
     {
     resdata.map((data, i) =>

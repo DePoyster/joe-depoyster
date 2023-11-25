@@ -1,6 +1,6 @@
 //Joe DePoyster
 //Final Project, COSC 4210
-//entry point js file
+//entry point js file for react at least????
 
 import React from "react";
 import {render} from "react-dom";
