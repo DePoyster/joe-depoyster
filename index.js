@@ -6,9 +6,8 @@ import fs from "fs";
 import React from "react";
 import ReactDOMServer from "react-dom/server";
 import express from "express";
-import data from "./src/data/resdata.json"
-
-import  App  from "./components/App.js";
+import App from "./src/components/App.js";
+import data from "./src/data/resdata.json";
 
 const PORT = process.env.PORT || 8080;
 const app = express();
@@ -17,7 +16,7 @@ app.use(express.static('public'));
 
 app.get("/*", (req, res) => {
   const app = ReactDOMServer.renderToString(
-    <App resdata = {data}/>
+    <App resdata={data} />
   );
   
   const indexFile = path.resolve(

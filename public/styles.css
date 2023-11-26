@@ -1,11 +1,7 @@
+/* Joe DePoyster */
+
 body {
   background: #FDF6E3;
-}
-img {
-  width: 150px;
-  height:auto;
-  margin:20px;
-  border-radius: 50%;
 }
 
 .title {
@@ -13,6 +9,7 @@ img {
   text-align: center;
 }
 
+/* <><><><><><><> RESUME STYLES <><><><><><><> */
 .resume {
   width: 80%;
   margin:auto;
@@ -29,4 +26,44 @@ img {
 .resume ul{
   text-align: left;
   list-style-type:circle;
+}
+
+/* <><><><><><><> NAVBAR STYLES <><><><><><><> */
+.slide-out-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height:250vmax;
+  background-color: #333;
+  transition: left 0.3s ease;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.slide-out-menu.open{
+  left: 0;
+}
+
+.slide-out-menu ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.slide-out-menu li {
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.toggle-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #333;
+  color: #fff;
+  border: dashed;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
 }

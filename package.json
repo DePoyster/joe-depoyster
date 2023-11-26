@@ -4,7 +4,9 @@
   "description": "React website for cosc4210 final project",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=development webpack --mode=development",
+    "build:server": "NODE_ENV=development webpack --config webpack.server.js --mode=development",
+    "build:client": "NODE_ENV=development webpack --config webpack.client.js --mode=development",
+    "build": "npm run build:server && npm run build:client",
     "start": "node ./build-server/index.js",
     "test": "echo \"Okay I probably should test this one...\""
   },
