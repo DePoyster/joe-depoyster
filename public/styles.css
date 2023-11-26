@@ -1,6 +1,12 @@
 body {
   background: #FDF6E3;
 }
+img {
+  width: 150px;
+  height:auto;
+  margin:20px;
+  border-radius: 50%;
+}
 
 .title {
   color: BLACK;

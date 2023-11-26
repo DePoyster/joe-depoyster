@@ -13,7 +13,7 @@ import  App  from "./components/App.js";
 const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use(express.static('/public'));
+app.use(express.static('public'));
 
 app.get("/*", (req, res) => {
   const app = ReactDOMServer.renderToString(
