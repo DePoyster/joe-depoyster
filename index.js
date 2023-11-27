@@ -15,7 +15,7 @@ const app = express();
 app.set('view engine', 'react');
 app.use(express.static('public'));
 
-app.get("/", (req, res) => {
+app.get("/*", (req, res) => {
   const app = ReactDOMServer.renderToString(
     <App resdata={data} />
   );

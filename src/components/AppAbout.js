@@ -2,15 +2,16 @@
 //Final Project cosc 4210
 
 import React from "react";
+import Navbar from "./Navbar";
 
-export default function AppAbout({resdata})
+export default function AppAbout()
 {
   return(
-    <>
-      <Title /> 
+    <div className="info">
       <Navbar />
-      <Resume resdata={resdata}/>
-    </>
+      <h2>About</h2>
+      <p>Freshly graduated, in the prime of my life, and hopelessly unemployable</p>
+    </div>
   )
 }
 

@@ -1,11 +1,13 @@
+//Database connectable and set up on Azure, but no being used :(
+
 const mongoose = require('mongoose');
 const env = require('./secretHidey.js');
 
 mongoose.Promise= global.Promise;
 
 connect().catch(err => console.log(err));
-
- async function connect() {
+//async?
+function connect() {
    const mongoUri = `mongodb://${env.dbName}:${env.key}@${env.dbName}@`
    return mongoose.connect(mongoUri, {useMongoClient: true});
  }
@@ -17,8 +19,8 @@ const resumeSchema = new mongoose.Schema({
 const Resume = mongoose.model('Resume', resumeSchema);
 
 const resume = new Resume({name: 'testfile' });
-
-await resume.save();
+//await?
+resume.save();
 
 console.log(resume.name);
 

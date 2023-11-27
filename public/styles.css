@@ -4,20 +4,29 @@ body {
   background: #FDF6E3;
   margin: 0;
   padding: 0;
+  font-family: 'Playpen Sans', fantasy;
 }
 h1 {
   font-size: 60px;
 }
+a {
+  color: lightblue;
+  font-size:larger;
+}
 .title {
-  background-color:#333;
-  color: #EAE3DC;
+  color: darkslategray;
   text-align: center;
   padding-top: 10px;
   padding: 2px;
   margin: 0;
   box-sizing: border-box;
 }
-
+.info {
+  width: 80%;
+  margin: auto;
+  color: darslategray;
+  text-align:left;
+}
 /* <><><><><><><> RESUME STYLES <><><><><><><> */
 .resume {
   width: 80%;
@@ -66,7 +75,7 @@ h1 {
 
 .toggle-button {
   position: absolute;
-  top: 20px;
+  top: 300px;
   left: 210px;
   background-color: #333;
   color: #EAE3DC;
