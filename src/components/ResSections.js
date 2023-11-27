@@ -6,16 +6,26 @@ import ResSectionData from "./ResSectionData";
 
 export default function ResSections({section, data})
 {
-  return (
-    <>
+  if(section === "Skills")  {
+    const list = data.join(',  ');
+    return (
+      <>
+        <h2>{section}</h2>
+        <p>{list}</p>
+      </>
+    )
+  }
+  else{
+    return(
+      <>
       <h2>{section}</h2>
-      <ul> 
       {
-        data.map((e, i) => (
-          <ResSectionData key={i} data={e}/>
+        data.map((e, i)=>
+        (
+          <ResSectionData key={i} {...e}/>
         ))
       }
-      </ul>
-    </>
-  )
+      </>
+    )
+  }
 }

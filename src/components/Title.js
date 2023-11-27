@@ -9,7 +9,8 @@ export default function Title()
     <header>
     <div className="title">
       <h1> Joe DePoyster</h1>
-      <p>jdepoyst@uwyo.edu | (307)413-5715</p>
+      <h3>jdepoyst@uwyo.edu   |   (307)413-5715</h3>
+      <p> B.S. Computer Science, University of Wyoming </p>
     </div>
     </header>
   )

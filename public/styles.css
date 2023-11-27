@@ -2,18 +2,26 @@
 
 body {
   background: #FDF6E3;
+  margin: 0;
+  padding: 0;
 }
-
+h1 {
+  font-size: 60px;
+}
 .title {
-  color: BLACK;
+  background-color:#333;
+  color: #EAE3DC;
   text-align: center;
+  padding-top: 10px;
+  padding: 2px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 /* <><><><><><><> RESUME STYLES <><><><><><><> */
 .resume {
   width: 80%;
   margin:auto;
-  padding:10px;
   color:darkslategrey;
   text-align:center;
 }
@@ -32,7 +40,7 @@ body {
 .slide-out-menu {
   position: fixed;
   top: 0;
-  left: -250px;
+  left: -210px;
   width: 250px;
   height:250vmax;
   background-color: #333;
@@ -52,17 +60,17 @@ body {
 
 .slide-out-menu li {
   padding: 15px;
-  color: #fff;
+  color: #EAE3DC;
   cursor: pointer;
 }
 
 .toggle-button {
-  position: fixed;
+  position: absolute;
   top: 20px;
-  left: 20px;
+  left: 210px;
   background-color: #333;
-  color: #fff;
-  border: dashed;
+  color: #EAE3DC;
+  border: solid;
   padding: 10px;
   cursor: pointer;
   z-index: 2;
