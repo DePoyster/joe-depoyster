@@ -7,8 +7,9 @@
       "Java",
       "Javascript",
       "Linux, GNU, FOSS", 
-      "Node, React, Express, Webpack",
-      "Embedded Systems, Microchips",
+      "Node.js, React, Express.js, Webpack",
+      "Azure",
+      "Embedded Systems, Microchips, FreeRTOS, CAN bus",
       "Version Control",
       "Microsoft Suite",
       "Documentation",
@@ -20,13 +21,14 @@
     "section":"Projects",
     "data":[
       {
-        "name": "Web App Development",
+        "name": "Web Development",
         "company": "Personal",
         "date": "November 2022 - Present",
         "points":[
-          "Built Resume website from scratch as self-started project using Wordpress",
-          "Currently developing website using React front end with Express back end",
-          "Learned how to read documentation and to figure out things alone"
+          "Building resume website from scratch as a self-started project",
+          "Completed course work that introduced me to React/Express/Node",
+          "Hosting stie using Azure. Currently learning Azure's CosmosDB and MongoDB",
+          "Learning from documentation, the internet, AI, and trial and error"
         ]
       },
       {
@@ -36,16 +38,18 @@
         "points":[
           "Worked on Linux Kernel modules for 50 year old hardware",
           "Debugged C code, reverse engineering to create diagram of how code worked",
-          "Wrote Linux C utilities that interfaced with OS system calls "
+          "Wrote Linux C utilities that interfaced with OS system calls ",
+          "Worked with team of observatory staff engineers and fellow students remotely"
         ]
       },
       {
         "name": "IT Work",
-        "company": "Bennet Paint & Glass",
+        "company": "Network 21",
         "date": "January 2021",
         "points":[
           "Installed end user systems and point of sales machiens in new office space",
-          "Worked with customers to configure machines to their liking, explaining things simply",
+          "Interacted with customers, fulfilled requests and explained things simply",
+          "Reinstalled Windows 10 environment, optimizing it to run fast on old hardware",
           "Installed Ethernet switch and cables, set up new private network"
         ]
       }
@@ -59,7 +63,7 @@
         "company": "EMIT Technologies",
         "date": "June 2023 - August 2023",
         "points": [
-          "Modified microcontroller code on natural gas engine control unit",
+          "Modified microcontroller C code on natural gas engine control unit",
           "Increased efficiency, speed, and robustness of I2C protocol implementation by reprogramming it to be interrupt driven instead of blocking",
           "Added functionality for ECU to run without HMI by modifying digital and analog I/O handling, FreeRTOS operating system, and CAN bus data",
           "Wrote unit tests in code base, and ran integration testing on engine",
@@ -73,7 +77,8 @@
         "points":[
           "Independently operated and maintained mobile kitchen and staff",
           "Innovated business ideas and recipes based off of customer feedback",
-          "Introduced to business planning and financing in entrepreneurial setting"
+          "Introduced to business planning and financing in entrepreneurial setting",
+          "Prioritized clientele's satisfaction, ensuring their return for business"
         ]
       },
       {
@@ -82,8 +87,9 @@
         "date": "September 2019 - December 2021",
         "points":[
           "Professionally set up stages for concerts & PA systems for events on UW campus",
-          "Programmed lights and lighting console. Dialed in Speakers and mixing board",
-          "Got various devices from different makes, models and years to work together by reading manuals and troubleshooting"
+          "Addressed and programmed lights using various lighting consoles",
+          "Wired anlog and digital audio channels from instruments to mixer & effects",
+          "Performed maintenance and troubleshooting on hardware and software"
         ]
       },
       {
@@ -92,7 +98,7 @@
         "date": "September 2018 - June 2020, Jan-May 2023",
         "points":[
           "Provided Quality customer service in a fast-paced enviroment",
-          "One of many jobs worked that payed my own way through college",
+          "Worked during free time throughout college to pay my own way through school",
           "Learned time managment skills to balance work and school"
         ]
       },
