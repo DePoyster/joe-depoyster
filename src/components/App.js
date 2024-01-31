@@ -1,6 +1,3 @@
-//Joe DePoyster
-//Final Project cosc 4210
-
 import React, {useState} from "react";
 import Resume from "./Resume";
 import Navbar from "./Navbar";

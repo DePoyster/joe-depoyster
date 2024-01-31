@@ -1,7 +1,7 @@
 {
-  "name": "final-project-depoyster",
+  "name": "joe-depoyster",
   "version": "1.0.0",
-  "description": "React website for cosc4210 final project",
+  "description": "personal website for joe depoyster",
   "main": "index.js",
   "scripts": {
     "build:server": "NODE_ENV=development webpack --config webpack.server.js --mode=development",

@@ -1,6 +1,3 @@
-//Joe DePoyster
-//COSC 4210 final
-
 var path = require("path")
 const nodeExternals = require("webpack-node-externals");
 

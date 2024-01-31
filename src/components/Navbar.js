@@ -1,6 +1,3 @@
-//Joe DePoyster
-//cosc 4210 final project
-
 import React, { useState } from 'react';
 import { Link } from "react-router-dom";
 import {GrCaretNext} from 'react-icons/gr';

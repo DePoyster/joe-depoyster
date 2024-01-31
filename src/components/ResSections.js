@@ -1,6 +1,3 @@
-//Joe DePoyster
-//Final Project cosc 4210
-
 import React from "react";
 import ResSectionData from "./ResSectionData";
 

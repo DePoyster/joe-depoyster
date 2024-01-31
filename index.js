@@ -1,6 +1,3 @@
-//Joe DePoyster 
-//COSC 4210 final
-
 import path from "path";
 import fs from "fs";
 import React from "react";

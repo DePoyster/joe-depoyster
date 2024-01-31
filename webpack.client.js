@@ -1,6 +1,3 @@
-//Joe DePoyster
-//Assignment 7, COSC 4210
-
 var path = require("path")
 module.exports = 
 {

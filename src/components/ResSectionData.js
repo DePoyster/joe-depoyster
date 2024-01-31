@@ -1,6 +1,3 @@
-//Joe DePoyster
-//Final Proejct COSC 4210
-
 import React from "react";
 import ResPoints from "./ResPoints";
 
