@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
+import Sheet from "./Sheet";
 
 function AccordionSection({ title, toggleSection, expanded, content}) {
   return (
     <div>
-      <button onClick={() => toggleSection(title)}>{title}</button>
+      <button className = "button" onClick={() => toggleSection(title)}>{title}</button>
       {expanded && (
         <div className="accordion-content">
-          {content} 
+          <Sheet content = {content}/> 
         </div>
       )}
     </div>
@@ -28,13 +29,13 @@ export default function Buttons()
         title="Software Guy"
         toggleSection={toggleSection} 
         expanded={expandedSection === 'Software Guy'} 
-        content={<p>'ate me code, 'ate me c'mputahs, luv me crisps. Simple as. </p>}
+        content="'ate me code, 'ate me c'mputahs, luv me crisps. Simple as."
       />
       <AccordionSection 
         title="Piano Man" 
         toggleSection={toggleSection} 
         expanded={expandedSection === 'Piano Man'} 
-        content={<p>prette shite at piano init</p>}
+        content="prette shite at piano init"
       />
     </div>
     </>

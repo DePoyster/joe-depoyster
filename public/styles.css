@@ -4,8 +4,9 @@ body {
   background: #FDF6E3;
   margin: 0;
   padding: 0;
-  /*font-family: 'Libre Baskerville', fantasy;*/
-  font-family: monospace; /*for development*/
+  font-family: 'Libre Baskerville', fantasy;
+  /*font-family: monospace; /*for development*/
+  overflow:hidden;
 }
 h1 {
   font-size: 60px;
@@ -29,29 +30,29 @@ a {
   text-align:left;
 }
 /* <><><><><><><> BUTTONS STYLES <><><><><><><> */
-.buttons {
+.Buttons {
   align-content: center;
 }
 
-
-
-
-/* <><><><><><><> RESUME STYLES <><><><><><><> */
-.resume {
-  width: 80%;
-  margin:auto;
-  color:darkslategrey;
-  text-align:center;
-}
-.resume h2{
+.button {
+  background-color: #333; /* Green */
+  color: #FDF6E3;
+  border: none;
+  padding: 15px 32px;
+  margin: 10px;
   text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
-.resume p{
-  text-align: left;
-}
-.resume ul{
-  text-align: left;
-  list-style-type:circle;
+
+.Sheet {
+  background-color: #FDF6E3;
+  padding: 20px 50px;
+  position: absolute;
+  top: 50px;
+  width: 80%;
+  height: 80%;
 }
 
 /* <><><><><><><> NAVBAR STYLES <><><><><><><> */
