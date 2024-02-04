@@ -6,9 +6,11 @@ import {GrCaretPrevious} from 'react-icons/gr';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   let arrowIcon = <GrCaretNext/>;
+
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   }
+
   isOpen ? arrowIcon = <GrCaretPrevious/> : arrowIcon = <GrCaretNext/>;
 
   return (

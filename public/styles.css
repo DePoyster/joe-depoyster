@@ -4,7 +4,8 @@ body {
   background: #FDF6E3;
   margin: 0;
   padding: 0;
-  font-family: 'Libre Baskerville', fantasy;
+  /*font-family: 'Libre Baskerville', fantasy;*/
+  font-family: monospace; /*for development*/
 }
 h1 {
   font-size: 60px;
@@ -27,6 +28,14 @@ a {
   color: darslategray;
   text-align:left;
 }
+/* <><><><><><><> BUTTONS STYLES <><><><><><><> */
+.buttons {
+  align-content: center;
+}
+
+
+
+
 /* <><><><><><><> RESUME STYLES <><><><><><><> */
 .resume {
   width: 80%;
