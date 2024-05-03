@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- try again boi -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe's Website</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="welcome-message">
+    <h1>Welcome to My Website</h1>
+    <p>Thank you so much for visiting. Please, take a deep breath, relax, and make yourself comfortable.</p>
+    <img src="mySig.png" alt="Joe's signature">
+  </div>
+  <header>
+    <h1>Joe DePoyster</h1>
+  </header>
+  <main>
+    <div class="image-container">
+      <img src="mapIcon.svg" width=200px alt="Info" class="info-image" data-info-id="info-page">
+      <img src="mapIcon.svg" width=200px alt="Cool Info" class="info-image" data-info-id="cool-info-page">
+      <img src="mapIcon.svg" width=200px alt="Y U No Info" class="info-image" data-info-id="y-u-no-info-page">
+    </div>
+
+    <div id="info-page" class="info-slide">
+      <h2>Info Page</h2>
+      <p>This is some info about the first image.</p>
+      <button onclick="closeSlide()">Close</button>
+    </div>
+
+    <div id="cool-info-page" class="info-slide">
+      <h2>Cool Info Page</h2>
+      <p>This is some cool info about the second image.</p>
+      <button onclick="closeSlide()">Close</button>
+    </div>
+
+    <div id="y-u-no-info-page" class="info-slide">
+      <h2>Y U No Info Page?</h2>
+      <p>There seems to be no info for this image yet.</p>
+      <button onclick="closeSlide()">Close</button>
+    </div>
+      
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
