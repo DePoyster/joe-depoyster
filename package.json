@@ -4,7 +4,7 @@
   "description": "Website with more swag",
   "main": "server.js",
   "scripts": {
-    "test": "echo Who needs testing?\"",
+    "test": "echo \"testing is for chumps\"",
     "start": "node server.js"
   },
   "author": "Joe DePoyster",
