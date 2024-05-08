@@ -43,10 +43,9 @@ main {
 
 
 /*   ..:: W E L C O M E   M E S S A G E ::.. */
-.welcome-message {
-  
+.welcome-message { 
   text-align: center;
-  transform: translate(50%, 50%);
+  padding-top: 40vh;
   font-size: 1rem;
   opacity: 0;
   transition: opacity 2s ease-in-out;

@@ -13,8 +13,6 @@ setTimeout(() => {
       welcomeMessage.style.display = 'none';
       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
       mainContent.style.opacity = 1;
-
-
   }, 2000); // This delay matches the transition duration in CSS
 }, 6000); //used to be 2000, 6000
 
@@ -41,8 +39,8 @@ function closeSlide() {
 /* ..:: P A G E   T O O   S M A L L ::.. */
 function checkWindowSize() {
   // Set your minimum width and height thresholds
-  const minWidth = 80;
-  const minHeight = 60;
+  const minWidth = 500;
+  const minHeight = 200;
 
   const overlay = document.getElementById('too-small-overlay');
 
@@ -63,7 +61,7 @@ function checkWindowSize() {
       overlay.style.justifyContent = 'center';
       overlay.style.zIndex = 9999;
       overlay.style.fontSize = '12px'; // Smaller font size
-      overlay.innerHTML = '<p>Why is your window so small?</p><img width="50" src="./Maximize-04.svg"/>'; // New text
+      overlay.innerHTML = '<p>HMMM,<br> your window is too small.<br>  Try turning your phone sideways, or zooming out.</p>';
 
       document.body.appendChild(overlay);
       console.error("Error: Window size is too small."); // Print error to console

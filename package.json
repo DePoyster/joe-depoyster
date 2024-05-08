@@ -1,6 +1,6 @@
 {
   "name": "tryagain",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Website with more swag",
   "main": "server.js",
   "scripts": {
