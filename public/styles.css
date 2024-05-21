@@ -16,12 +16,11 @@ body {
 header {
   color: #fbf1c7;
   background-color: #3c3836;
-  font-size: 50px;
+  font-size: 45px;
   margin: 0px;
-  margin-bottom: -20px;
   padding-left: 50px;
   padding-top: 20px;
-  padding-bottom: 80px;
+  padding-bottom: 60px;
   /* Welcome Message Animation stuff
   transition: opacity 2s ease-in-out; 
   opacity: 0; /*reset by js */
@@ -34,16 +33,30 @@ main {
   background-color: lightgoldenrodyellow;
   background-image: url(./geoFcram.jpg);
   background-size: cover;
+  background-position-x: center;
+  background-position-y: -30vh;
   color: #3c3836;
+  width: 100vw;
   min-height: 100vh;
   margin: 0px;
+  display: inline-block;
 
   /*welcome message stuff
   transition: 2s ease-in-out;
   opacity: 0; /*reset by js */
 }
-
-
+.column {
+  background-color: #fbf1c7;
+  width: 5vw;
+  height: 100vh;
+  display: inline-block;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
 
 
 /*   ..:: W E L C O M E   M E S S A G E ::.. */
@@ -63,7 +76,7 @@ main {
 
 /* ..:: I N F O   S L I D E R S ::.. */
 .image-container { 
-  display: flex;
+  display: inline-block;
   justify-content: space-around;
   margin-top: 20px;
 }
