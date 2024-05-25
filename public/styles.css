@@ -1,21 +1,43 @@
+:root {
+  --gruvwhite: #fbf1c7;
+  --gruvtan: #ebdbb2;
+  --gruvdarktan: #a89984;
+  --gruvgrey: #928374;
+  --gruvdarkgrey: #3c3836;
+  --gruvblack: #282828;
+  --gruvred: #cc241d;
+  --gruvredd: #fb4934;
+  --gruvgreen: #98971a;
+  --gruvgreenn: #b8bb26;
+  --gruvyellow: #d79921;
+  --gruvyelloww: #fabd2f;
+  --gruvblue: #458588;
+  --gruvbluee: #83a598;
+  --gruvpurple: #b16286;
+  --gruvpurplee: #d3869b;
+  --gruvaqua: #689d6a;
+  --gruvaquaa: #8ec07c;
+ 
+}
+
 body {
   font-family: "IBM Plex Serif";
   font-style: normal;
-  background-color: tan;
-  color: #3c3836;
+  background-color: var(--gruvaqua);
+  color: var(--gruvred);
   margin:0;
   border: 0;
   padding:0;
   overflow:hidden;
 }
-@media (max-width:30em){
-  body{
-    overflow:scroll;
+@media (max-width: 1405px){ /* 1405 is just about where the background starts to move */
+  main{
+    background-position-y: 0vh;
   }
 }
 header {
-  color: #fbf1c7;
-  background-color: #3c3836;
+  color: var(--gruvwhite);
+  background-color: var(--gruvdarkgrey);
   font-size: 45px;
   margin: 0px;
   padding-left: 50px;
@@ -33,12 +55,12 @@ header h1 {
   margin: 0px;
 }
 main {
-  background-color: lightgoldenrodyellow;
+  background-color: red;
   background-image: url(./geoFcram.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: -30vh;
-  color: #3c3836;
+  color: var(--gruvblack);
   width: 100vw;
   min-height: 100vh;
   margin: 0px;
@@ -49,19 +71,19 @@ main {
   opacity: 0; /*reset by js */
 }
 .column {
-  background-color: #fbf1c7;
+  background-color: var(--gruvgrey);
   width: 5vw;
   height: 100vh;
   display: inline-block;
-  border: solid #3c3836;
+  border: solid var(--gruvdarkgrey);
 }
 .left{
   float: left;
-  box-shadow: 10px 0px 30px #3c3836;
+  box-shadow: 10px 0px 10px var(--gruvdarkgrey);
 }
 .right{
   float: right;
-  box-shadow: -10px 0px 30px #3c3836;
+  box-shadow: -10px 0px 10px var(--gruvdarkgrey);
 }
 
 
@@ -96,18 +118,20 @@ main {
   right: -100%; /* Initially hidden off-screen */
   width: 50vw;
   height: 100vh;
-  background-color: #eee; /* Light gray background */
+  background-color: var(--gruvblack); /* Light gray background */
+  color: var(--gruvwhite);
+  opacity: 95%;
   padding: 20px;
   box-sizing: border-box;
   margin: 2px; /* 2px margin on all sides */
-  border: 2px solid #ccc; /* 2px solid border */
+border: 2px solid var(--gruvblack); /* 2px solid border */
   transition: right 0.5s ease;
 }
 .info-slide.open {
-right: 100px; /* Slide in from the right */
+right: 25vw; /* Slide in from the right */
 }
 .info-slide button {
-  background-color: #ddd; /* Button background color */
+  background-color: var(--gruvtan); /* Button background color */
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -115,6 +139,6 @@ right: 100px; /* Slide in from the right */
   transition: .5s ease;
 }
 .info-slide button:hover {
-  background-color: #ccc; /* Button hover effect */
+  background-color: var(--gruvdarktan); /* Button hover effect */
   transform: rotate(0.5turn);
 }
