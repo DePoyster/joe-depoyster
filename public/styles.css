@@ -30,11 +30,7 @@ body {
   padding:0;
   overflow:hidden;
 }
-@media (max-width: 1405px){ /* 1405 is just about where the background starts to move */
-  main{
-    background-position-y: 0vh;
-  }
-}
+
 header {
   color: var(--gruvwhite);
   background-color: var(--gruvdarkgrey);
@@ -70,9 +66,21 @@ main {
   transition: 2s ease-in-out;
   opacity: 0; /*reset by js */
 }
+
+@media (max-width: 1405px){ /* 1405 is just about where the background starts to move */
+  main{
+    background-position-y: -10vh;
+
+  }
+  header h1 {
+    color: red;
+  }
+}
+
 .column {
   background-color: var(--gruvgrey);
-  width: 5vw;
+  background-image: url(columnDeco.svg);
+  width: 40px;
   height: 100vh;
   display: inline-block;
   border: solid var(--gruvdarkgrey);
@@ -86,6 +94,15 @@ main {
   box-shadow: -10px 0px 10px var(--gruvdarkgrey);
 }
 
+.columnbottom{
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  bottom: 0px;
+  background-color: var(--gruvgrey);
+  background-image: url(columnDecoBottom.svg);
+}
 
 /*   ..:: W E L C O M E   M E S S A G E ::.. */
 /* .welcome-message { 
