@@ -54,16 +54,16 @@ header h1 {
 
 header button {
   margin: 0;
-  padding: 0;
+  padding: 10;
   background-color: inherit;
   border: 0;
 transition: transform .5s ease-in-out;
 }
 header button:hover {
-  transform: rotate(0.5turn);
+  transform: rotate(1turn);
 }
 img {
-  width: 150px;
+  width: 125px;
 }
 img:hover {
   transform: rotate(1turn);
@@ -71,7 +71,7 @@ img:hover {
 
 main {
   background-color: var(--gruvwhite);
-  background-image: url(./geoFcram.jpg);
+  background-image: url(./images/geoFcram.jpg);
   background-size: cover;
   background-position-x: center;
   background-position-y: -30vh;
@@ -102,7 +102,7 @@ main {
 /*   ..:: S I D E   C O L U M N   D E C O S ::..   */
 .column {
   background-color: var(--gruvgrey);
-  background-image: url(columnDeco.svg);
+  background-image: url(images/columnDeco.svg);
   width: 40px;
   height: 100vh;
   display: inline-block;
@@ -123,7 +123,7 @@ main {
   position: absolute;
   bottom: 0px;
   background-color: var(--gruvgrey);
-  background-image: url(columnDecoBottom.svg);
+  background-image: url(images/columnDecoBottom.svg);
 }
 
 
@@ -144,11 +144,6 @@ main {
 
 
 /* ..:: I N F O   S L I D E R S ::.. */
-.image-container { 
-  display: inline-block;
-  justify-content: space-around;
-  margin-top: 20px;
-}
 .info-image {
   width: 100px;
   cursor: pointer;

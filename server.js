@@ -5,6 +5,7 @@ const app = express();
 const port = 8080;
 
 // Serve static files from the 'public' directory
+// Almost everything is s t a t i c
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve index.html for all other routes
