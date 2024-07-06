@@ -19,22 +19,25 @@
 
 
 /* ..:: I N F O    S L I D E R */
-const infoImages = document.querySelectorAll('.info-image');
-const infoSlides = document.querySelectorAll('.info-slide');
+const infoImages = document.querySelectorAll('.slidey-button');
+const infoSlides = document.querySelectorAll('.slidey-thing');
+const closeButtons= document.querySelectorAll('.close-button');
+
+
+function closeSlides() {
+  infoSlides.forEach(slide => slide.classList.remove('open'));
+}
 
 infoImages.forEach(image => {
   image.addEventListener('click', function() {
     const infoId = this.dataset.infoId;
     const infoSlide = document.getElementById(infoId);
+    closeSlides();
     infoSlide.classList.add('open');
   });
 });
 
-function closeSlide() {
-  infoSlides.forEach(slide => slide.classList.remove('open'));
-}
-
-
+closeButtons.forEach(button => button.onclick = closeSlides)
 
 /* ..:: P A G E   T O O   S M A L L ::.. */
 function checkWindowSize() {

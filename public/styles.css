@@ -62,9 +62,6 @@ transition: transform .5s ease-in-out;
 header button:hover {
   transform: rotate(1turn);
 }
-img {
-  width: 125px;
-}
 img:hover {
   transform: rotate(1turn);
 }
@@ -144,11 +141,11 @@ main {
 
 
 /* ..:: I N F O   S L I D E R S ::.. */
-.info-image {
-  width: 100px;
+.slidey-button {
+  width: 125px;
   cursor: pointer;
 }
-.info-slide {
+.slidey-thing {
   position: fixed;
   top: 190px;
   right: -100%; /* Initially hidden off-screen */
@@ -163,17 +160,17 @@ main {
   border: 2px solid var(--gruvblack); /* 2px solid border */
   transition: right 0.5s ease;
 }
-.landing{
+#landing-page{
   right: 37vw;
   top: 36%;
   height: 25vh;
   width: 25vw;
   border-radius: 50px;
 }
-.info-slide.open {
+.slidey-thing.open {
   right: 25vw; /* Slide in from the right */
 }
-.info-slide button {
+.slidey-thing button {
   background-color: var(--gruvtan); /* Button background color */
   border: none;
   padding: 10px 20px;
@@ -181,7 +178,7 @@ main {
   border-radius: 5px; /* Rounded corners */
   transition: .5s ease;
 }
-.info-slide button:hover {
+.slidey-thing button:hover {
   background-color: var(--gruvdarktan); /* Button hover effect */
   transform: rotate(0.5turn);
 }
