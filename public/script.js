@@ -1,20 +1,20 @@
 /* ..:: W E L C O M E   M E S S A G E ::.. */
-// const welcomeMessage = document.querySelector('.welcome-message');
-// const siteTitle = document.querySelector('header');
-// const mainContent = document.querySelector('main');
+const welcomeMessage = document.querySelector('.welcome-message');
+const siteTitle = document.querySelector('header');
+const mainContent = document.querySelector('main');
 
-// // Transition the welcome message in
-// welcomeMessage.style.opacity = 1;
+// Transition the welcome message in
+welcomeMessage.style.opacity = 1;
 
-// // After 3 seconds, transition the welcome message out and display the main content and site title
-// setTimeout(() => {
-//   welcomeMessage.style.opacity = 0;
-//   setTimeout(() => {
-//       welcomeMessage.style.display = 'none';
-//       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
-//       mainContent.style.opacity = 1;
-//   }, 2000); // This delay matches the transition duration in CSS
-// }, 6000); //used to be 2000, 6000
+// After 3 seconds, transition the welcome message out and display the main content and site title
+setTimeout(() => {
+  welcomeMessage.style.opacity = 0;
+  setTimeout(() => {
+      //welcomeMessage.style.display = 'none';
+      siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
+      mainContent.style.opacity = 1;
+  }, 2000); // This delay matches the transition duration in CSS
+}, 6000); //used to be 2000, 6000
 
 
 
