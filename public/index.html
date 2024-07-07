@@ -2,6 +2,7 @@
 <!-- try again boi -->
 <html lang="en">
 <head>
+  <!-- Who really cares about all this stuff? -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe's Website</title>
@@ -10,40 +11,39 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 </head>
+
 <body>
   <div class="welcome-message">
     <h1>Welcome to My Website</h1>
     <p>Thank you so much for visiting. Please, take a deep breath, relax, and make yourself comfortable.</p>
     <img src="images/mySig.png" alt="Joe's signature">
   </div>
+
   <header>
     <h1>Swag Land</h1>
-      <img src="images/navcompass.png" alt="compass button" id="nav-button" class="slidey-button" data-info-id="nav-page"/>
+    <img src="images/navcompass.png" alt="compass button" id="nav-button" class="slidey-button" data-page-id="nav-page"/>
   </header>
+
   <main>
+    <!-- Decorative columns on side of page -->
     <div class="column right"><div class="column-bottom"></div></div>
 
-    <div id="nav-page" class="slidey-thing">
+    <div id="nav-page" class="slidey-thing open">
       <h1> This is the nav page </h1>
-      <p> relax, don't do it </p>
+      <button class="slidey-button" data-page-id=sdev>Sdev</button>
+      <button class="slidey-button" data-page-id="piano">Piano</button>
       <button class="close-button">Close</button>
     </div>
 
-    <div id="landing-page" class="slidey-thing open">
-      <h1> What's brackin slime?</h1>
-      <p> how you livin'?</p>
-      <img src="images/info.svg" alt="info button" width="200px" class="slidey-button" data-info-id="info-page">
-    </div>
-
-    <div id="info-page" class="slidey-thing">
-      <h2>Info Page</h2>
-      <p>This is some info about the first image.</p>
+    <div id=sdev class="slidey-thing">
+      <h2>Software Developer</h2>
+      <p>I'm trying, at least. Coding and all that. </p>
       <button class="close-button">Close</button>
     </div>
 
-    <div id="cool-info-page" class="slidey-thing">
-      <h2>Cool Info Page</h2>
-      <p>This is some cool info about the second image.</p>
+    <div id="piano" class="slidey-thing">
+      <h2>PLABOfff</h2>
+      <p>playin piano. Swaggin out. . .</p>
       <button onclick="closeSlide()">Close</button>
     </div>
 
@@ -52,8 +52,10 @@
       <p>There seems to be no info for this image yet.</p>
       <button onclick="closeSlide()">Close</button>
     </div>
-  <div class="column left"><div class="columnbottom"></div></div>
+
+  <div class="column left"><div class="column-bottom"></div></div>
   </main>
-  <script src="script.js"></script>
+
+  <script src="script.js"></script> <!-- The fun stuff -->
 </body>
 </html>

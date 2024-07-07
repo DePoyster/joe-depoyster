@@ -70,7 +70,6 @@ main {
   min-height: 100vh;
   margin: 0px;
   display: inline-block;
-
   /*welcome message stuff  */
   transition: 2s ease-in-out;
   opacity: 0; /*reset by js  */
@@ -106,7 +105,7 @@ main {
   float: right;
   box-shadow: -10px 0px 10px var(--gruvdarkgrey);
 }
-.columnbottom{
+.column-bottom{
   width: 40px;
   height: 40px;
   display: inline-block;
@@ -127,7 +126,7 @@ main {
   text-align: center;
   padding-top: 40vh;
   font-size: 1rem;
-  transition: opacity 2s ease-in-out;
+  transition: opacity .2s ease-in-out;
 }
 .welcome-message img {
   width: 5rem;
@@ -143,6 +142,7 @@ main {
 }
 .slidey-thing {
   position: fixed;
+  text-align: center;
   top: 190px;
   right: -100%; /* Initially hidden off-screen */
   width: 50vw;
@@ -155,23 +155,27 @@ main {
   margin: 2px; /* 2px margin on all sides */
   transition: right 0.5s ease;
 }
-#landing-page.open{
-  right: 37vw;
-  top: 36%;
-  height: 25vh;
-  width: 25vw;
-  border-radius: 50px;
+.slidey-thing.open {
+  right: 0vw; /* Slide in from the right */
+}
+#nav-page{
+  top: -100%;
+  right: 25vw;
+  transition: top .5s ease;
+}
+#nav-page.open{
+  top: 190px;
 }
 
-.slidey-thing.open {
-  right: 25vw; /* Slide in from the right */
-}
 .slidey-thing button {
-  background-color: var(--gruvtan); /* Button background color */
+  background-color: var(--gruvblack); /* Button background color */
+  color: var(--gruvtan);
+  text-align: left;
+  font-size: xx-large;
+  width: 100%;
   border: none;
-  padding: 10px 20px;
+  padding: 20px 30px;
   cursor: pointer;
-  border-radius: 5px; /* Rounded corners */
 }
 .slidey-thing button:hover {
   background-color: var(--gruvdarktan); /* Button hover effect */

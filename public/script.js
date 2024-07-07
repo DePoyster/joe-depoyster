@@ -5,35 +5,33 @@ const mainContent = document.querySelector('main');
 
 // Transition the welcome message in
 welcomeMessage.style.opacity = 1;
-
 // After 3 seconds, transition the welcome message out and display the main content and site title
 setTimeout(() => {
   welcomeMessage.style.opacity = 0;
   setTimeout(() => {
-      //welcomeMessage.style.display = 'none';
+      welcomeMessage.style.display = 'none';
       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
       mainContent.style.opacity = 1;
-  }, 2000); // This delay matches the transition duration in CSS
-}, 6000); //used to be 2000, 6000
+  }, .2000); // This delay matches the transition duration in CSS
+}, .6000); //used to be 2000, 6000
 
 
 
 /* ..:: I N F O    S L I D E R */
-const infoImages = document.querySelectorAll('.slidey-button');
-const infoSlides = document.querySelectorAll('.slidey-thing');
+const slideyButtons = document.querySelectorAll('.slidey-button');
+const slideyPage = document.querySelectorAll('.slidey-thing');
 const closeButtons= document.querySelectorAll('.close-button');
 
-
 function closeSlides() {
-  infoSlides.forEach(slide => slide.classList.remove('open'));
+  slideyPage.forEach(slide => slide.classList.remove('open'));
 }
 
-infoImages.forEach(image => {
-  image.addEventListener('click', function() {
-    const infoId = this.dataset.infoId;
-    const infoSlide = document.getElementById(infoId);
+slideyButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    const pageId = this.dataset.pageId;
+    const slidePage = document.getElementById(pageId);
     closeSlides();
-    infoSlide.classList.add('open');
+    slidePage.classList.add('open');
   });
 });
 
