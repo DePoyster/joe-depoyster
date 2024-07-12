@@ -1,3 +1,6 @@
+// taken from a well-known javascript library
+//i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
+
 /* ..:: W E L C O M E   M E S S A G E ::.. */
 const welcomeMessage = document.querySelector('.welcome-message');
 const siteTitle = document.querySelector('header');
@@ -16,7 +19,6 @@ setTimeout(() => {
 }, .6000); //used to be 2000, 6000
 
 
-
 /* ..:: I N F O    S L I D E R */
 const slideyButtons = document.querySelectorAll('.slidey-button');
 const slideyPage = document.querySelectorAll('.slidey-thing');
@@ -29,6 +31,11 @@ function closeSlides() {
 slideyButtons.forEach(button => {
   button.addEventListener('click', function() {
     const pageId = this.dataset.pageId;
+    if(pageId == "rocksprings"){
+      moveBackground("150%", "-500px", "-1100px");
+    } else if(pageId == "wyoming"){
+      moveBackground("100%", "center", "-30vh");
+    }
     const slidePage = document.getElementById(pageId);
     closeSlides();
     slidePage.classList.add('open');
@@ -36,6 +43,15 @@ slideyButtons.forEach(button => {
 });
 
 closeButtons.forEach(button => button.onclick = closeSlides)
+
+/* ..:: move the wyoming map to something coo ::.. */
+function moveBackground(size, xpos, ypos){
+  let mainstyle = document.body.getElementsByTagName('main')[0].style;
+  mainstyle.backgroundSize = size;
+  mainstyle.backgroundPositionX = xpos;
+  mainstyle.backgroundPositionY = ypos;
+}
+
 
 /* ..:: P A G E   T O O   S M A L L ::.. */
 function checkWindowSize() {

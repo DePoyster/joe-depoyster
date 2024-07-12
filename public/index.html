@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-<!-- try again boi -->
+<!-- YEAH THAT'S RIGHT BABY A WHOLE SPA DEVELOPED IN VANILLA JS WHOOO!!! -->
 <html lang="en">
 <head>
-  <!-- Who really cares about all this stuff? -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe's Website</title>
@@ -20,7 +19,7 @@
   </div>
 
   <header>
-    <h1>Swag Land</h1>
+    <h1>Joe DePoyster</h1>
     <img src="images/navcompass.png" alt="compass button" id="nav-button" class="slidey-button" data-page-id="nav-page"/>
   </header>
 
@@ -28,30 +27,33 @@
     <!-- Decorative columns on side of page -->
     <div class="column right"><div class="column-bottom"></div></div>
 
-    <div id="nav-page" class="slidey-thing open">
-      <h1> This is the nav page </h1>
-      <button class="slidey-button" data-page-id=sdev>Sdev</button>
-      <button class="slidey-button" data-page-id="piano">Piano</button>
-      <button class="slidey-button" data-page-id="mountains">Mountains</button>
+    <div id="nav-page" class="slidey-thing">
+      <h1> Where do you want to go? </h1>
+      <button class="slidey-button" data-page-id=wyoming>Restart Tour</button>
+      <button class="slidey-button" data-page-id="rocksprings">Rock Springs</button>
+      <button class="slidey-button" data-page-id="laramie">Laramie</button>
       <button class="close-button">Close</button>
     </div>
 
-    <div id=sdev class="slidey-thing">
-      <h2>Software Developer</h2>
-      <p>I'm trying, at least. Coding and all that. </p>
+    <div id=wyoming class="slidey-thing open">
+      <h2>A creative freelance software developer based in Rock Springs Wyoming </h2>
+      <p> Available for work: Contact me to make your life easier. OR harder. Whatsoever you desire. </p>
+      <p> Admittedly, this website is still under construction. So if something is weird that's why. </p>
+      <i> Web Applications ..::.. Linux Administration ..::.. Embedded System Engineering ..::.. I Do It All </i>
+      <button class="slidey-button" data-page-id="rocksprings"><i>Web Applications</i></button>
       <button class="close-button">Close</button>
     </div>
 
-    <div id="piano" class="slidey-thing">
+    <div id="rocksprings" class="slidey-thing">
       <h2>PLABOfff</h2>
       <p>playin piano. Swaggin out. . .</p>
       <button class="close-button">Close</button>
     </div>
 
-    <div id="mountains" class="slidey-thing">
+    <div id="greenriver" class="slidey-thing">
       <h2>Ah yes, the Winds</h2>
       <img src="./images/DSC_1428.JPG" alt="picture of mountains">
-      <p>The mountains are important. If you're scared then lock your door then.</p>
+      <p>The mountains are important. If you're scared lock your door then.</p>
       <p>Wyoming sucks, now go home and tell your friends.</p>
       <button onclick="closeSlide()">Close</button>
     </div>
