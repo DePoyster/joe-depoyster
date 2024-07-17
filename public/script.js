@@ -31,10 +31,14 @@ function closeSlides() {
 slideyButtons.forEach(button => {
   button.addEventListener('click', function() {
     const pageId = this.dataset.pageId;
-    if(pageId == "rocksprings"){
+    if(pageId == "webapp"){
       moveBackground("150%", "-500px", "-1100px");
-    } else if(pageId == "wyoming"){
+    } else if(pageId == "landing"){
       moveBackground("100%", "center", "-30vh");
+    } else if(pageId == "linux" || pageId == "education"){
+      moveBackground("150%", "-1700px", "-1200px")
+    } else if(pageId == "embedded"){
+      moveBackground("150%", "-900px", "-20px")
     }
     const slidePage = document.getElementById(pageId);
     closeSlides();
@@ -44,7 +48,7 @@ slideyButtons.forEach(button => {
 
 closeButtons.forEach(button => button.onclick = closeSlides)
 
-/* ..:: move the wyoming map to something coo ::.. */
+/* ..:: move the landing map to something coo ::.. */
 function moveBackground(size, xpos, ypos){
   let mainstyle = document.body.getElementsByTagName('main')[0].style;
   mainstyle.backgroundSize = size;

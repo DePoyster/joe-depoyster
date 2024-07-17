@@ -166,13 +166,16 @@ main {
 #nav-page.open{
   top: 190px;
 }
-#wyoming{
+#landing{
   height: 25vw;
   top: 250px;
 }
-#wyoming.open{
+#landing.open{
   right: 25vw;
   background-size: contain;
+}
+#landing-buttons{
+  display: inline-flex;
 }
 
 .slidey-thing button {
