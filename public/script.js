@@ -31,16 +31,19 @@ function closeSlides() {
 slideyButtons.forEach(button => {
   button.addEventListener('click', function() {
     const pageId = this.dataset.pageId;
-    if(pageId == "webapp"){
-      moveBackground("150%", "-500px", "-1100px");
-    } else if(pageId == "landing"){
+    if(pageId == "landing"){
       moveBackground("100%", "center", "-30vh");
+    } else if(pageId == "webapp" || pageId == "thiswebsite"){
+      moveBackground("150%", "-500px", "-1100px");
     } else if(pageId == "linux" || pageId == "education"){
       moveBackground("150%", "-1700px", "-1200px")
     } else if(pageId == "embedded"){
       moveBackground("150%", "-900px", "-20px")
+    } else if(pageId == "piano"){
+      moveBackground("150%", "-200px", "-110px")
     }
     const slidePage = document.getElementById(pageId);
+    console.log(typeof(slidePage));
     closeSlides();
     slidePage.classList.add('open');
   });
