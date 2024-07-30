@@ -15,8 +15,8 @@ setTimeout(() => {
       welcomeMessage.style.display = 'none';
       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
       mainContent.style.opacity = 1;
-  }, .2000); // This delay matches the transition duration in CSS
-}, .6000); //used to be 2000, 6000
+  }, 1000); // This delay matches the transition duration in CSS
+}, 6000); //used to be 2000, 6000
 
 
 /* ..:: I N F O    S L I D E R */
@@ -43,7 +43,6 @@ slideyButtons.forEach(button => {
       moveBackground("150%", "-200px", "-110px")
     }
     const slidePage = document.getElementById(pageId);
-    console.log(typeof(slidePage));
     closeSlides();
     slidePage.classList.add('open');
   });

@@ -71,8 +71,12 @@ main {
   margin: 0px;
   display: inline-block;
   /*welcome message stuff  */
-  transition: all 2s ease-in-out;
+  transition: all 1s ease-in-out;
   opacity: 0; /*reset by js  */
+}
+
+a {
+  color: plum;
 }
 
 /* Experiemental media query */
@@ -82,11 +86,9 @@ main {
 
   }
   header h1 {
-    color: red;
+    color: var(--gruvbluee);
   }
 }
-
-
 
 /*   ..:: S I D E   C O L U M N   D E C O S ::..   */
 .column {
@@ -115,8 +117,6 @@ main {
   background-image: url(images/columnDecoBottom.svg);
 }
 
-
-
 /*   ..:: W E L C O M E   M E S S A G E ::.. */
  .welcome-message { 
   color: var(--gruvwhite);
@@ -133,13 +133,39 @@ main {
   height: auto;
 } 
 
-
-
-/* ..:: I N F O   S L I D E R S ::.. */
+/* ..:: B U T T O N S ::.. */
 .slidey-button {
-  width: 125px;
   cursor: pointer;
+  color: var(--gruvtan);
+  font-size: xx-large;
+  width: 100%;
+  border: none;
+  padding: 20px 30px;
+  cursor: pointer; 
+  background-color: var(--gruvblack);
 }
+.slidey-button:hover {
+  background-color: var(--gruvdarktan); /* Button hover effect */
+}
+.nav{
+  width: 125px;
+  background-color: inherit;
+  padding: 0;
+  margin: 0;
+}
+.nav:hover{
+  background-color: var(--gruvdarkgrey);
+}
+.back {
+  background-image: url(images/backArrow.svg);
+  background-position:center;
+  position: absolute;
+  bottom: 30vh;
+  width: 50px;
+  height: 50px;
+}
+
+/*  ..:: S L I D E Y   T H I N G S ::.. */
 .slidey-thing {
   position: fixed;
   text-align: center;
@@ -177,17 +203,6 @@ main {
 #landing-buttons{
   display: inline-flex;
 }
-
-.slidey-thing button {
-  background-color: var(--gruvblack); /* Button background color */
-  color: var(--gruvtan);
-  text-align: left;
-  font-size: xx-large;
-  width: 100%;
-  border: none;
-  padding: 20px 30px;
-  cursor: pointer;
-}
-.slidey-thing button:hover {
-  background-color: var(--gruvdarktan); /* Button hover effect */
+#landing-buttons i{
+  font-size: medium;
 }
