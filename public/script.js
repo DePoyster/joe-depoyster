@@ -15,8 +15,8 @@ setTimeout(() => {
       welcomeMessage.style.display = 'none';
       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
       mainContent.style.opacity = 1;
-  }, 1000); // This delay matches the transition duration in CSS
-}, 6000); //used to be 2000, 6000
+  }, .1000); // This delay matches the transition duration in CSS
+}, .6000); //used to be 2000, 6000
 
 
 /* ..:: I N F O    S L I D E R */
@@ -100,3 +100,46 @@ function checkWindowSize() {
 // Initial check and add event listener for resize and zoom
 checkWindowSize();
 window.addEventListener('resize', checkWindowSize);
+
+/* ..:: H E A D E R   B O R D E R ::..*/
+const canvas = document.getElementById("headerBorder");
+const ctx = canvas.getContext("2d");
+ctx.translate(.5,.5); //gotta straddle the pixles?
+const cw = canvas.width; //You know, they told us about good naming conventions 
+const ch = canvas.height; //but they never mentioned anything about car pool tunnel.
+
+draw=()=> {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.beginPath();
+
+  //outerBorder
+  ctx.moveTo(10, 10);
+  ctx.lineTo(cw-10, 10);
+  ctx.lineTo(cw-10, ch-10);
+  ctx.lineTo(10, ch-10);
+  ctx.lineTo(10, 10);
+  //counterclockwise to make hole 
+  ctx.moveTo(12, 12);
+  ctx.lineTo(12, ch-12);
+  ctx.lineTo(cw-12, ch-12);
+  ctx.lineTo(cw-12, 12);
+  ctx.lineTo(12, 12);
+
+  //bottomdeco
+  ctx.moveTo(12, ch-30);
+  ctx.lineTo(cw-12, ch-30);
+  ctx.lineTo(cw-12, ch-12);
+  ctx.lineTo(12, ch-12);
+
+  ctx.moveTo(12, ch-28);
+  ctx.lineTo(12, ch-12);
+  ctx.lineTo(cw-12, ch-12);
+  ctx.lineTo(cw-12, ch-28);
+
+  ctx.fillStyle = "#ebdbb2";
+  ctx.fill();
+  ctx.closePath();
+  console.log("The money has flung the shit");
+}
+
+draw();
