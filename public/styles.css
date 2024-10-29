@@ -85,7 +85,7 @@ main {
 }
 
 a {
-  color: plum;
+  color: var(--gruvbluee);
 }
 
 /* Experiemental media query */
@@ -198,6 +198,11 @@ a {
   right: 25vw;
   transition: top .5s ease;
 }
+#nav-button{
+  border-radius: 90px;
+  border: 2px solid var(--gruvgrey);
+  width: 130px;
+}
 #nav-page.open{
   top: 190px;
 }
@@ -205,12 +210,25 @@ a {
   height: 25vw;
   top: 250px;
 }
+#landing h2{
+  margin-top:  100px;
+}
+#landingDeco{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -4;
+}
 #landing.open{
   right: 25vw;
   background-size: contain;
 }
 #landing-buttons{
   display: inline-flex;
+}
+#landing-buttons button{
+  border: 2px solid var(--gruvgrey);
+  margin: 10px;
 }
 #landing-buttons i{
   font-size: medium;

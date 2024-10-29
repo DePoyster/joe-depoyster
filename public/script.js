@@ -136,10 +136,45 @@ draw=()=> {
   ctx.lineTo(cw-12, ch-12);
   ctx.lineTo(cw-12, ch-28);
 
-  ctx.fillStyle = "#ebdbb2";
+  ctx.fillStyle = "#928374";
   ctx.fill();
   ctx.closePath();
   console.log("The money has flung the shit");
 }
 
+/* ..:: L A N D I N G   D E C O ::..*/
+
+//TODO: Make this dynamic on resize 
+const landingElement = document.getElementById("landing");
+const landingCanvas = document.getElementById("landingDeco");
+const lctx = landingCanvas.getContext("2d");
+lctx.translate(.5,.5); //gotta straddle the pixles?
+let lcw = landingElement.clientWidth;
+let lch = landingElement.clientHeight;
+landingCanvas.width = lcw;
+landingCanvas.height = lch;
+console.log(lch);
+ldraw=()=> {
+  lctx.clearRect(0, 0, lcw, lch);
+  lctx.beginPath();
+
+  //outerBorder
+  lctx.moveTo(10, 10);
+  lctx.lineTo(lcw-10, 10);
+  lctx.lineTo(lcw-10, lch-10);
+  lctx.lineTo(10, lch-10);
+  lctx.lineTo(10, 10);
+  //counterclockwise to make hole 
+  lctx.moveTo(12, 12);
+  lctx.lineTo(12, lch-12);
+  lctx.lineTo(lcw-12, lch-12);
+  lctx.lineTo(lcw-12, 12);
+  lctx.lineTo(12, 12);
+
+  lctx.fillStyle = "#928374";
+  lctx.fill();
+  lctx.closePath();
+}
+
 draw();
+ldraw();
