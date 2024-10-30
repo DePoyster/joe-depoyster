@@ -15,8 +15,8 @@ setTimeout(() => {
       welcomeMessage.style.display = 'none';
       siteTitle.style.opacity = 1; /* Trigger the fade-in of the title */
       mainContent.style.opacity = 1;
-  }, .1000); // This delay matches the transition duration in CSS
-}, .6000); //used to be 2000, 6000
+  }, 1000); // This delay matches the transition duration in CSS
+}, 6000); //used to be 2000, 6000
 
 
 /* ..:: I N F O    S L I D E R */
@@ -36,7 +36,7 @@ slideyButtons.forEach(button => {
     } else if(pageId == "webapp" || pageId == "thiswebsite"){
       moveBackground("150%", "-500px", "-1100px");
     } else if(pageId == "linux" || pageId == "education"){
-      moveBackground("150%", "-1700px", "-1200px")
+      moveBackground("150%", "-1700px", "-1350px")
     } else if(pageId == "embedded"){
       moveBackground("150%", "-900px", "-20px")
     } else if(pageId == "piano"){
@@ -62,8 +62,8 @@ function moveBackground(size, xpos, ypos){
 /* ..:: P A G E   T O O   S M A L L ::.. */
 function checkWindowSize() {
   // Set your minimum width and height thresholds
-  const minWidth = 500;
-  const minHeight = 200;
+  const minWidth = 1405;
+  const minHeight = 676;
 
   const overlay = document.getElementById('too-small-overlay');
 
@@ -77,15 +77,73 @@ function checkWindowSize() {
       overlay.style.left = 0;
       overlay.style.width = '100%';
       overlay.style.height = '100%';
-      overlay.style.backgroundColor = 'gray';
+      overlay.style.backgroundColor = '#3c3836';
       overlay.style.color = 'white';
       overlay.style.display = 'flex';
       overlay.style.alignItems = 'center';
       overlay.style.justifyContent = 'center';
       overlay.style.zIndex = 9999;
       overlay.style.fontSize = '12px'; // Smaller font size
-      overlay.innerHTML = '<p>HMMM,<br> your window is too small.<br>  Try turning your phone sideways, or zooming out.</p>';
+      overlay.innerHTML = '<p>HMMM,<br>\
+           your window is too small.<br>\
+           This website is best viewed full-screen, landscape orientation.<br>\
+           Or, try zooming out or turning your phone sideways.</p>';
 
+      //border to help 
+      const overlayBorder = document.createElement('canvas');
+      overlayBorder.style.position = 'absolute';
+      overlayBorder.style.left = 0;
+      overlayBorder.style.top = 0;
+      const ctx = overlayBorder.getContext("2d");
+      ctx.translate(.5,.5);
+      overlayBorder.width = 1405;
+      overlayBorder.height = 676;
+      ctx.clearRect(0, 0, overlayBorder.width, overlayBorder.height);
+      ctx.beginPath();
+    
+      //outerBorder
+      ctx.moveTo(0, 0);
+      ctx.lineTo(overlayBorder.width, 0);
+      ctx.lineTo(overlayBorder.width, overlayBorder.height);
+      ctx.lineTo(0, overlayBorder.height);
+      ctx.lineTo(0,0);
+      ctx.moveTo(5, 5);
+      ctx.lineTo(5, overlayBorder.height - 5);
+      ctx.lineTo(overlayBorder.width -5, overlayBorder.height - 5);
+      ctx.lineTo(overlayBorder.width-5, 5);
+      ctx.lineTo(5, 5);
+
+      //helper arrows
+      let arrowXpos = 930; //max target: 1370
+      let arrowYpos = 250;
+      for(let i = 0; i < 7; i++){
+        ctx.moveTo(arrowXpos, arrowYpos-10);
+        ctx.lineTo(arrowXpos+20, arrowYpos);
+        ctx.lineTo(arrowXpos, arrowYpos+10);
+        ctx.lineTo(arrowXpos, arrowYpos+7);
+        ctx.lineTo(arrowXpos+15, arrowYpos);
+        ctx.lineTo(arrowXpos, arrowYpos-7);
+        ctx.lineTo(arrowXpos, arrowYpos-10);
+        arrowXpos+=70;
+      }
+      arrowXpos = 300;
+      arrowYpos = 338;
+      for(let i = 0; i < 5; i++){
+        ctx.moveTo(arrowXpos-10, arrowYpos);
+        ctx.lineTo(arrowXpos, arrowYpos + 20);
+        ctx.lineTo(arrowXpos+10, arrowYpos);
+        ctx.lineTo(arrowXpos+7, arrowYpos);
+        ctx.lineTo(arrowXpos, arrowYpos+15);
+        ctx.lineTo(arrowXpos-7, arrowYpos);
+        ctx.lineTo(arrowXpos-10, arrowYpos);
+        arrowYpos+=70;
+      }
+      //draw
+      ctx.fillStyle = "#ffffff";
+      ctx.fill();
+      ctx.closePath();
+      //add overlay to page
+      overlay.appendChild(overlayBorder);
       document.body.appendChild(overlay);
       console.error("Error: Window size is too small."); // Print error to console
     }
@@ -130,16 +188,28 @@ draw=()=> {
   ctx.lineTo(cw-12, ch-30);
   ctx.lineTo(cw-12, ch-12);
   ctx.lineTo(12, ch-12);
-
+  //ditto
   ctx.moveTo(12, ch-28);
   ctx.lineTo(12, ch-12);
   ctx.lineTo(cw-12, ch-12);
   ctx.lineTo(cw-12, ch-28);
+  //filled boxes
+  let bunk = 12;
+  let chunk = 160;
+  for(let i = 0; i < 12; i++){
+    if(!(i % 2)){
+      ctx.moveTo(bunk, ch-30);
+      ctx.lineTo(chunk, ch-30);
+      ctx.lineTo(chunk, ch-12);
+      ctx.lineTo(bunk, ch-12);
+    }
+    bunk = chunk;
+    chunk += 160;
+  }
 
   ctx.fillStyle = "#928374";
   ctx.fill();
   ctx.closePath();
-  console.log("The money has flung the shit");
 }
 
 /* ..:: L A N D I N G   D E C O ::..*/
@@ -153,7 +223,7 @@ let lcw = landingElement.clientWidth;
 let lch = landingElement.clientHeight;
 landingCanvas.width = lcw;
 landingCanvas.height = lch;
-console.log(lch);
+//console.log(lch);
 ldraw=()=> {
   lctx.clearRect(0, 0, lcw, lch);
   lctx.beginPath();
@@ -177,4 +247,4 @@ ldraw=()=> {
 }
 
 draw();
-ldraw();
+//ldraw(); //TODO mae dynamic on resize

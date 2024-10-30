@@ -1,12 +1,7 @@
-# Joe DePoyster Artsy Website thing
+# Joe DePoyster Website thing
 ## Simple website for fun
-## The website is currently being hosted at joe-depoyster.azure-websites.net
+## The website is currently being hosted at https://joe-depoyster.tiiny.site/
 
 # TODO
-finish canvas header border thing
-
-fill out info 
-
-
-
-
+- Dynamic resizing of canvas borders
+- Nav Button Hinting
