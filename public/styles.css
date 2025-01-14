@@ -19,6 +19,7 @@
   --gruvaquaa: #8ec07c;
 }
 
+
 body {
   font-family: "IBM Plex Serif";
   font-style: normal;
@@ -86,17 +87,6 @@ main {
 
 a {
   color: var(--gruvbluee);
-}
-
-/* Experiemental media query */
-@media (max-width: 1405px){ /* 1405 is just about where the background starts to move */
-  main{
-    background-position-y: -10vh;
-
-  }
-  header h1 {
-    color: var(--gruvbluee);
-  }
 }
 
 /*   ..:: S I D E   C O L U M N   D E C O S ::..   */
@@ -189,6 +179,8 @@ a {
   box-sizing: border-box;
   margin: 2px; /* 2px margin on all sides */
   transition: right 0.5s ease;
+  border: 10px double var(--gruvdarktan);
+
 }
 .slidey-thing.open {
   right: 0vw; /* Slide in from the right */
@@ -197,6 +189,8 @@ a {
   top: -100%;
   right: 25vw;
   transition: top .5s ease;
+  border: 10px double var(--gruvdarktan);
+
 }
 #nav-button{
   border-radius: 90px;
@@ -209,6 +203,7 @@ a {
 #landing{
   height: 25vw;
   top: 250px;
+  border: 10px double var(--gruvdarktan);
 }
 #landing h2{
   margin-top:  100px;
@@ -232,4 +227,16 @@ a {
 }
 #landing-buttons i{
   font-size: medium;
+}
+@media (max-width: 1405px) { /* 1405 is just about where the background starts to move */
+  body{
+    overflow: auto;
+  }
+  main{
+    background-image: none; 
+    background-color: var(--gruvgrey);
+  }
+  .column{
+    display: none;  
+  }
 }
